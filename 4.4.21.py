@@ -1,2 +1,5 @@
-Python 3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)] on win32
-Enter "help" below or click "Help" above for more information.
+s = input("Nhập các số nhị phân 4 chữ số, cách nhau bởi dấu phẩy: ")
+numbers = s.split(',')
+div5 = [num for num in numbers if int(num, 2) % 5 == 0]
+print("Các số chia hết cho 5:", ','.join(div5))
+
