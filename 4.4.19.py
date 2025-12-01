@@ -1,2 +1,12 @@
-Python 3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)] on win32
-Enter "help" below or click "Help" above for more information.
+def is_prime(x):
+    if x < 2:
+        return False
+    for i in range(2, int(x**0.5)+1):
+        if x % i == 0:
+            return False
+    return True
+
+primes = tuple(i for i in range(2, 1000000) if is_prime(i))
+print("Tuple chứa các số nguyên tố < 1 triệu đã tạo.")
+
+
