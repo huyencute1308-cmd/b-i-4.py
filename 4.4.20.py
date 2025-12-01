@@ -1,2 +1,12 @@
-Python 3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)] on win32
-Enter "help" below or click "Help" above for more information.
+n = int(input("Nhập n: "))
+
+triangle = []
+for i in range(n):
+    row = [1]*(i+1)
+    for j in range(1, i):
+        row[j] = triangle[i-1][j-1] + triangle[i-1][j]
+    triangle.append(row)
+
+for row in triangle:
+    print(row)
+
